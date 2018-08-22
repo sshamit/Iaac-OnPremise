@@ -9,7 +9,7 @@ apt-add-repository ppa:ansible/ansible
 apt -y update
 apt -y install ansible
 apt-get install -y unzip
-ansible-playbook ../ansible/apache.yml
+#ansible-playbook ../ansible/apache.yml
 #cd /usr/local/bin
 #wget https://releases.hashicorp.com/consul/1.2.0/consul_1.2.0_linux_amd64.zip
 #unzip *.zip
