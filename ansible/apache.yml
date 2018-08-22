@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  roles:
+    - geerlingguy.nfs
+    - geerlingguy.packer-debian
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
