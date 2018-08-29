@@ -54,7 +54,7 @@ There's an included Vagrantfile that allows quick testing of the built Vagrant b
    - Creating Nginx VMs from ISO.
    - Deployment of Micro services based applications on newly built infra VMs
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
 
 ## Benefits
 
