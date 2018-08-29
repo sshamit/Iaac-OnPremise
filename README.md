@@ -30,7 +30,15 @@ The following software must be installed/present on your local machine before yo
   - [Hyper – V] - Hypervisor allow for multiple virtual machines (VMs) to run on the same physical server. 
    
 
+    
+## Use Cases
+   - Spin up on-premise infrastructure specific to applications requirements.
+   - Creating industry standard ISO files.
+   - Creating MySQL VMs from ISO.
+   - Creating Nginx VMs from ISO.
+   - Deployment of Micro services based applications on newly built infra VMs
 
+![Screenshot](screenshot.jpg)
 
 ## Usage
 
@@ -47,15 +55,6 @@ There's an included Vagrantfile that allows quick testing of the built Vagrant b
     # For VirtualBox:
     $ vagrant up
     
-## Use Cases
-   - Spin up on-premise infrastructure specific to applications requirements.
-   - Creating industry standard ISO files.
-   - Creating MySQL VMs from ISO.
-   - Creating Nginx VMs from ISO.
-   - Deployment of Micro services based applications on newly built infra VMs
-
-![Screenshot](screenshot.jpg)
-
 ## Benefits
 
    - Speed & Agility
