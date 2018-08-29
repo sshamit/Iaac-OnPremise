@@ -44,10 +44,17 @@ The following software must be installed/present on your local machine before yo
 
 Make sure all the required software (listed above) is installed, then cd to the directory containing this README.md file, and run:
 
+**Packer**:
+
     $ packer build ubuntu1604.json
 
 After a few minutes, Packer should tell you the box was generated successfully.
 
+**Ansible**:
+
+    $ ansible-playbook -vvv -i inventories/dev mysql.yml
+    Note: We need to disable ssh key check 'export ANSIBLE_HOST_KEY_CHECKING=False'
+    
 ## Testing built boxes
 
 There's an included Vagrantfile that allows quick testing of the built Vagrant boxes. From this same directory, run one of the following commands after building the boxes:
