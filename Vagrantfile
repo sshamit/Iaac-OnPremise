@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
      # Run Ansible from the Vagrant Host
      #
       config.vm.provision "shell", inline: <<-SHELL
-        ansible-playbook .ansible/apache.yml
+        ansible-playbook ./ansible/apache.yml
       SHELL
     end
   end
