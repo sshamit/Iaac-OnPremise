@@ -8,8 +8,8 @@ Vagrant.configure("2") do |config|
     # VirtualBox.
     # `vagrant up virtualbox --provider=virtualbox`
     
-    config.vm.define "s2" do |virtualbox|
-      virtualbox.vm.hostname = "s2"
+    config.vm.define "apache" do |virtualbox|
+      virtualbox.vm.hostname = "apache"
       virtualbox.vm.box = "ubuntu1604"
 	  virtualbox.ssh.username = "vagrant"
 	  virtualbox.ssh.password = "vagrant"
@@ -22,8 +22,11 @@ Vagrant.configure("2") do |config|
         v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         v.customize ["modifyvm", :id, "--ioapic", "on"]
       end
-  
+     #
+     # Run Ansible from the Vagrant Host
+     #
+      config.vm.provision "ansible" do |ansible|
+       ansible.playbook = "/ansible/apache.yml"
+      end
     end
-  
-    
   end
