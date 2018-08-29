@@ -4,13 +4,9 @@
 
 **Pre-built Vagrant Box**:
 
-  - [`vagrant init geerlingguy/ubuntu1604`](https://vagrantcloud.com/geerlingguy/boxes/ubuntu1604)
-  - See older versions: http://files.midwesternmac.com/
-
-This example build configuration installs and configures Ubuntu 16.04 x86_64 minimal using Ansible, and then generates two Vagrant box files, for:
+This example build configuration installs and configures Ubuntu 16.04 x86_64 minimal using Packer, Ansible, and then generates two Vagrant box files, for:
 
   - VirtualBox
-  - VMware
 
 The example can be modified to use more Ansible roles, plays, and included playbooks to fully configure (or partially) configure a box file suitable for deployment for development environments.
 
@@ -45,11 +41,3 @@ There's an included Vagrantfile that allows quick testing of the built Vagrant b
     
     # For VirtualBox:
     $ vagrant up virtualbox --provider=virtualbox
-
-## License
-
-MIT license.
-
-## Author Information
-
-Created in 2016 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
