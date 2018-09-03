@@ -1,8 +1,6 @@
 #!groovy
 
-node('node') {
-
-    currentBuild.result = "SUCCESS"
+node {
 
     try {
 
