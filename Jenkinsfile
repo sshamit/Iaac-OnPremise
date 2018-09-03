@@ -14,14 +14,14 @@ node('node') {
 
        stage('Build Docker'){
             echo 'Starting iso images process by packer'
-            sh 'packer.exe build ubuntu1604.json'
+            #sh 'packer.exe build ubuntu1604.json'
             echo 'Completed iso images process by packer'
        }
 
        stage('Deploy'){
 
          echo 'Started vagrant up'
-         sh 'vagrant up'
+         #sh 'vagrant up'
          echo 'Completed vagrant up'
          mail body: 'Vagrant up successful',
                      from: 'kushwaha_a@hcl.com',
