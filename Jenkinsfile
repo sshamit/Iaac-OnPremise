@@ -21,11 +21,6 @@ node {
          echo 'Started vagrant up'
          //sh 'vagrant up'
          echo 'Completed vagrant up'
-         mail body: 'Vagrant up successful',
-                     from: 'kushwaha_a@hcl.com',
-                     replyTo: 'kushwaha_a@hcl.com',
-                     subject: 'Vagrant up successful',
-                     to: 'kushwaha_a@hcl.com'
        }
 
 
@@ -33,13 +28,7 @@ node {
     }
     catch (err) {
 
-        currentBuild.result = "FAILURE"
-
-            mail body: "Vagrant up failed is here: ${env.BUILD_URL}" ,
-                     from: 'kushwaha_a@hcl.com',
-                     replyTo: 'kushwaha_a@hcl.com',
-                     subject: 'Vagrant up successful',
-                     to: 'kushwaha_a@hcl.com'
+        echo 'Your build failed due to some execption'
 
         throw err
     }
